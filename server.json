@@ -1,0 +1,18 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.pipeworx-io/plos",
+  "title": "Plos",
+  "description": "PLOS journals — Solr-backed full-text search across all PLOS OA content",
+  "version": "0.1.0",
+  "websiteUrl": "https://pipeworx.io/packs/plos",
+  "repository": {
+    "url": "https://github.com/pipeworx-io/mcp-plos",
+    "source": "github"
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://gateway.pipeworx.io/plos/mcp"
+    }
+  ]
+}
