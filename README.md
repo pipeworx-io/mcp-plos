@@ -1,17 +1,19 @@
-# mcp-plos
+# @pipeworx/plos
 
-PLOS Search MCP — Solr-backed search over all PLOS journals.
+[PLOS](https://www.plos.org) Search API MCP — full-text search across all PLOS open-access journals. Keyless (PLOS's Solr-backed API).
 
-Part of [Pipeworx](https://pipeworx.io) — an MCP gateway connecting AI agents to 673+ live data sources.
+Part of [Pipeworx](https://pipeworx.io) — an MCP gateway connecting AI agents to 1394+ live data sources.
 
 ## Tools
 
-| Tool | Description |
-|------|-------------|
-| `search` | Solr search across all PLOS journals. |
-| `article` | Article by DOI. |
-| `search_authored_by` | Articles by author name. |
-| `recent` | Most recent publications across PLOS. |
+- `search(query, rows?, start?, sort?, fl?)` — Solr-style search
+- `article(doi)` — article by DOI
+- `search_authored_by(name, rows?)` — articles by author name
+- `recent(rows?)` — most recent publications across PLOS
+
+## Data source
+
+`https://api.plos.org/search` (use the `q` Solr query syntax).
 
 ## Quick Start
 
@@ -27,7 +29,7 @@ Add to your MCP client (Claude Desktop, Cursor, Windsurf, etc.):
 }
 ```
 
-Or connect to the full Pipeworx gateway for access to all 673+ data sources:
+Or connect to the full Pipeworx gateway for access to all 1394+ data sources:
 
 ```json
 {
@@ -51,7 +53,7 @@ The gateway picks the right tool and fills the arguments automatically.
 
 ## More
 
-- [All tools and guides](https://github.com/pipeworx-io/examples)
+- [Docs and guides](https://pipeworx.io/docs)
 - [pipeworx.io](https://pipeworx.io)
 
 ## License
