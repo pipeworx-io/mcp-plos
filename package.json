@@ -1,20 +1,32 @@
 {
   "name": "@pipeworx/mcp-plos",
-  "version": "0.1.0",
-  "description": "PLOS journals — Solr-backed full-text search across all PLOS OA content",
+  "version": "0.1.1",
+  "description": "PLOS Search MCP — Solr-backed search over all PLOS journals.",
   "type": "module",
   "main": "src/index.ts",
   "types": "src/index.ts",
+  "bin": {
+    "mcp-plos": "bin/cli.js"
+  },
   "keywords": ["mcp", "mcp-server", "model-context-protocol", "pipeworx", "plos"],
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/pipeworx-io/mcp-plos"
+    "url": "git+https://github.com/pipeworx-io/mcp-plos.git"
   },
   "scripts": {
     "typecheck": "tsc --noEmit"
   },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.30.0",
+    "tsx": "^4.19.0"
+  },
   "devDependencies": {
-    "typescript": "^5.7.0"
+    "typescript": "^5.9.3",
+    "@cloudflare/workers-types": "^4.20260405.1"
+  },
+  "pipeworx": {
+    "sourceHash": "v1-5ec94f03f3659ad23e27d6c1c7563ff02a7e99c550f265b2031a308f46e11f1f",
+    "sourceCommit": "00c836ddeaecbdd581dcfb0fb1842efea104006e"
   }
 }
