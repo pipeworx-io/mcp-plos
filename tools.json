@@ -1,0 +1,79 @@
+[
+  {
+    "name": "search",
+    "description": "Solr-powered full-text search across all PLOS open-access journals; supports field-qualified queries (e.g. abstract:CRISPR AND title:gene), pagination, sorting, and custom field selection. Returns title, authors, journal, date, and abstract by default.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "query": {
+          "type": "string",
+          "description": "e.g. \"abstract:CRISPR AND title:gene\""
+        },
+        "rows": {
+          "type": "number",
+          "description": "1-1000 (default 25)"
+        },
+        "start": {
+          "type": "number"
+        },
+        "sort": {
+          "type": "string",
+          "description": "e.g. \"publication_date desc\""
+        },
+        "fl": {
+          "type": "string",
+          "description": "Comma-sep fields to return."
+        }
+      },
+      "required": [
+        "query"
+      ]
+    }
+  },
+  {
+    "name": "article",
+    "description": "Fetch a single PLOS article record by DOI (e.g. 10.1371/journal.pone.0153207), returning title, authors, publication date, journal, and abstract.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "doi": {
+          "type": "string",
+          "description": "e.g. \"10.1371/journal.pone.0153207\""
+        }
+      },
+      "required": [
+        "doi"
+      ]
+    }
+  },
+  {
+    "name": "search_authored_by",
+    "description": "Articles by author name.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "rows": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "name"
+      ]
+    }
+  },
+  {
+    "name": "recent",
+    "description": "Most recent publications across PLOS.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "rows": {
+          "type": "number"
+        }
+      }
+    }
+  }
+]
