@@ -1,6 +1,6 @@
 {
   "name": "@pipeworx/mcp-plos",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "PLOS Search MCP — Solr-backed search over all PLOS journals.",
   "type": "module",
   "main": "lib/index.js",
@@ -27,7 +27,7 @@
     "mode": "gateway",
     "slug": "plos",
     "gatewaySlug": "plos",
-    "sourceHash": "v1-6b99ee4a329d06f5c57528af2c9168fd11d58419e4186d1a05c00b802e09686b",
-    "sourceCommit": "6bae4cfa7b6a73bbe014dc8820a19c80c842b21e"
+    "sourceHash": "v1-9d53bbcb13f719adf8b882ee793138eb29f9ac5faaf47fb455daa88a99bc4567",
+    "sourceCommit": "243a06a6ca2d3b6075325f3b66a1468d0a2eb603"
   }
 }
